@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Black: #1a1a1a;
+  --Yellow: #ffad32;
+}
+
+.container {
+  background-color: rgba(255, 127, 80, 0.185);
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 128px);
+  column-gap: 25px;
+}
+
+span {
+  color: var(--Yellow);
+}
+
+h3 {
+  color: var(--Black);
+  font-feature-settings: "clig" off, "liga" off;
+  /* HEADING/H3 ( 3.375rem ) */
+  font-family: Unbounded;
+  font-size: 60.75px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 72.9px */
+}
+
+#logo-header {
+  grid-column-end: 5;
+  grid-column-start: 1;
+}
+
+#header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  /* width: 100%; */
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+#header-links li {
+  list-style: none;
+  display: flex;
+}
+#header-links a {
+  color: var(--Black);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-decoration: none;
+}
