@@ -185,6 +185,10 @@ h6 {
 }
 .slider-img {
   height: max-content;
+  position: relative;
+}
+.slider-img img {
+  z-index: 0;
 }
 .slider-img::before {
   transition: 0.25s;
