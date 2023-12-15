@@ -5,6 +5,10 @@
 * button:hover {
   cursor: pointer;
 }
+* a {
+  text-decoration: none;
+  color: unset;
+}
 
 :root {
   --Black: #1a1a1a;
@@ -169,9 +173,6 @@ h6 {
   float: inline-end;
 }
 
-.swiper-wrapper > a {
-  text-decoration: none;
-}
 .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -252,4 +253,25 @@ h6 {
 }
 .slider-nav button::after {
   content: none;
+}
+
+.footer-links {
+  grid-column: 1/9;
+  display: flex;
+  gap: 25px;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+.footer-links h5 > a {
+  border-bottom: 1px solid transparent;
+}
+.footer-links h5 > a:hover {
+  border-bottom: 1px solid var(--Black);
+}
+.footer-links rect {
+  transition: 0.25s;
+}
+.footer-links svg:hover rect {
+  fill: var(--Yellow);
 }
