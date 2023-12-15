@@ -28,9 +28,11 @@ p {
   font-weight: 400;
 }
 .p1 {
+  font-family: Nunito Sans;
   font-size: 18px;
 }
 .p2 {
+  font-family: Nunito Sans;
   font-size: 14px;
 }
 
@@ -153,6 +155,7 @@ h6 {
   text-align: center;
   color: var(--Yellow);
   margin-block: 50px;
+  margin-inline: auto;
   grid-column: 1/9;
   position: relative;
   max-width: max-content;
@@ -253,6 +256,18 @@ h6 {
 }
 .slider-nav button::after {
   content: none;
+}
+
+.contacts-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contacts-ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 }
 
 .footer-links {
