@@ -6,4 +6,14 @@ const swiper = new Swiper(".slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
 });

@@ -169,6 +169,9 @@ h6 {
   float: inline-end;
 }
 
+.swiper-wrapper > a {
+  text-decoration: none;
+}
 .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -208,9 +211,18 @@ h6 {
   z-index: 10;
 }
 
+.swiper-pagination {
+  max-width: max-content;
+  position: unset;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-inline: auto;
+}
 .swiper-pagination-bullet {
   /* margin-left: 12.5px !important; */
   /* margin-right: 12.5px !important; */
+  margin: 0 !important;
   width: 16px !important;
   height: 16px !important;
   background-color: var(--Grey) !important;
@@ -219,4 +231,25 @@ h6 {
 .swiper-pagination-bullet-active {
   background-color: var(--Black) !important;
   opacity: 0.5 !important;
+}
+.slider-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  margin-inline: auto;
+  height: fit-content;
+  grid-column: 1/9;
+}
+.slider-nav button {
+  background-color: var(--Yellow);
+  border: none;
+  width: 64px;
+  height: 44px;
+  margin: 0;
+  padding: 10px 20px;
+  position: unset;
+}
+.slider-nav button::after {
+  content: none;
 }
