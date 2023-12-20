@@ -37,7 +37,7 @@ services.map(({ h5, p }, index) => {
       </div>
       <h5>${h5}</h5>
       <p>${p}</p>
-      </a>
+    </a>
   </li>
   `;
 });
