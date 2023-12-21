@@ -177,10 +177,12 @@ h6 {
 }
 
 .swiper-slide {
+  width: 434px;
+}
+.swiper-slide a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 434px;
 }
 .swiper-slide:nth-child(3n) {
   max-width: 281px;
@@ -270,6 +272,40 @@ h6 {
   gap: 15px;
 }
 
+.portfolio-ul {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.portfolio-ul button {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* height: 23px; */
+  line-height: 1;
+  gap: 8px;
+  color: var(--Grey);
+  transition: 0.23s;
+}
+.portf-btn-active {
+  color: var(--Black) !important;
+}
+.portfolio-ul button::before {
+  height: 24px;
+  width: 24px;
+  content: url("../images/portfolio-ul-inactive.svg");
+}
+.portf-btn-active::before {
+  content: url("../images/portfolio-ul-marker.svg") !important;
+}
+
+#portfolio-posts {
+  grid-column: 3/9;
+}
+/* ------------------------------------------------------------ */
 .footer-links {
   grid-column: 1/9;
   display: flex;
