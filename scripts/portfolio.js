@@ -85,6 +85,7 @@ list = [
 
 showPosts = (index) => {
   // console.log("heehhe");
+
   portfolio_item_posts.innerHTML = "";
   list[index].posts.map(({ date, inDev, heading, body }) => {
     portfolio_item_posts.innerHTML += `
