@@ -110,7 +110,7 @@ h6 {
 #header-links a:hover {
   border-bottom: 1px solid black;
 }
-
+/* --------------------------------------------- */
 .br {
   display: flex;
   justify-content: space-between;
@@ -151,9 +151,8 @@ h6 {
   color: var(--Yellow);
 }
 
-#digital {
+.digital {
   text-align: center;
-  color: var(--Yellow);
   margin-block: 50px;
   margin-inline: auto;
   grid-column: 1/9;
@@ -161,19 +160,30 @@ h6 {
   max-width: max-content;
   display: inline;
 }
-#digital::after,
-#digital::before {
+.digital::after,
+.digital::before {
   height: 72px;
   width: 72px;
   content: "";
   display: inline;
   background: url("../images/digital-arrow.svg");
 }
-#digital::before {
+.digital::before {
   float: inline-start;
 }
-#digital::after {
+.digital::after {
   float: inline-end;
+}
+.digital-1 {
+  color: var(--Yellow);
+}
+.digital-2 {
+  color: var(--White);
+  background-color: var(--Yellow);
+}
+.digital-2::after,
+.digital-2::before {
+  background: url("../images/digital-arrow-white.svg") !important;
 }
 
 .swiper-slide {
@@ -260,6 +270,21 @@ h6 {
   content: none;
 }
 
+.auditory-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.auditory-btns button {
+  background: none;
+  border: 1px solid var(--Grey);
+  font-size: 27px;
+  font-family: Unbounded;
+  padding-block: 25px;
+}
+.auditory-btn-active {
+  border: 1px solid var(--Yellow) !important;
+}
+
 .contacts-ul {
   display: flex;
   flex-direction: column;
@@ -328,7 +353,7 @@ h6 {
   flex-direction: column;
   gap: 25px;
 }
-/* ------------------------------------------------------------ */
+/* ------------------------------------------------ */
 .footer-links {
   grid-column: 1/9;
   display: flex;

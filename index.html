@@ -155,7 +155,7 @@
           justify-content: center;
         "
       >
-        <h3 id="digital">Давайте создавать мир DIGITAL вместе!</h3>
+        <h3 class="digital digital-1">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
       <!-- Услуги -->
       <div class="container" style="row-gap: 50px; margin-block: 100px">
@@ -224,7 +224,55 @@
           </div>
         </div>
       </div>
-
+      <!-- Школа Фронтенда -->
+      <div class="container" style="row-gap: 50px; margin-block: 100px">
+        <div class="br">
+          <p>Школа</p>
+          <p>Школа</p>
+        </div>
+        <h3 style="grid-column: 2/9; text-align: center">
+          <span style="color: var(--Yellow)">Школа</span> Фронтенд-а
+        </h3>
+        <p
+          style="
+            grid-column: 1/9;
+            font-size: 27px;
+            font-family: Unbounded;
+            text-indent: 320px;
+          "
+        >
+          В нашей школе фронтенд-програ<span style="color: var(--Grey)"
+            >ммирования предлагаются высококачественные курсы для всех, кто
+            хочет освоить востребованное направление в IT. Курсы подходят любому
+            возрасту и уровню.</span
+          >
+        </p>
+        <div class="modules" style="grid-column: 1/5">
+          <div class="auditory-btns">
+            <button
+              id="auditory-btn-kids"
+              class="auditory-btn-active"
+              onclick="changeAuditory(0)"
+            >
+              Для детей
+            </button>
+            <button id="auditory-btn-adults" onclick="changeAuditory(1)">
+              Для взрослых
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Digital 2 -->
+      <div
+        class="container digital-2"
+        style="
+          border-block: 1px solid var(--Yellow);
+          max-width: 100%;
+          justify-content: center;
+        "
+      >
+        <h3 class="digital digital-2">Давайте создавать мир DIGITAL вместе!</h3>
+      </div>
       <!-- Наше портфолио -->
       <div class="container" style="row-gap: 50px; margin-block: 50px">
         <div class="br">
@@ -253,7 +301,7 @@
           justify-content: center;
         "
       >
-        <h3 id="digital">Давайте создавать мир DIGITAL вместе!</h3>
+        <h3 class="digital digital-1">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
       <!-- Контакты -->
       <div class="container" style="row-gap: 50px; margin-block: 100px">
@@ -535,5 +583,6 @@
     <!-- <script src="./scripts/swiper/swiper.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/slider.js"></script>
+    <script src="./scripts/modules.js"></script>
   </body>
 </html>
