@@ -6,22 +6,22 @@ list = [
     item: "Все работы",
     posts: [
       {
-        date: "17 октября",
-        inDev: true,
-        heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
-        body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
+        date: "17 октября 2023",
+        inDev: false,
+        heading: "DigitalCraft E-Commerce Platform",
+        body: "Создание уникальной электронной коммерции для DigitalCraft — платформы, сочетающей стильный дизайн с высокой функциональностью. Результат - максимально удобный опыт покупок для клиентов и эффективная система управления продуктами для владельцев бизнеса.",
       },
       {
-        date: "17 октября",
+        date: "21 ноября 2023",
         inDev: true,
-        heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
-        body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
+        heading: "Arturia Learning Management System",
+        body: "Разработка системы управления обучением для Arturia LMS — инновационной образовательной платформы. Пользователи могут легко навигировать, создавать курсы и взаимодействовать, обеспечивая эффективное онлайн-обучение.",
       },
       {
-        date: "17 октября",
+        date: "6 декабря",
         inDev: true,
-        heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
-        body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
+        heading: "EcoGreen Corporate Website Redesign",
+        body: "Пересмотр корпоративного веб-сайта EcoGreen с акцентом на устойчивость и современный дизайн. Новый сайт подчеркивает экологическую ответственность компании и предоставляет пользовательский опыт высокого качества.",
       },
     ],
   },
@@ -89,16 +89,16 @@ list = [
   },
 ];
 
-showPosts = (index) => {
+showPosts = (id) => {
   // console.log("heehhe");
 
   portfolio_item_posts.innerHTML = "";
-  list[index].posts.map(({ date, inDev, heading, body }) => {
+  list[id].posts.map(({ date, inDev, heading, body }, index) => {
     portfolio_item_posts.innerHTML += `
     <li class="portfolio-post">
       <div class="post-info">
         <div class="post-meta">
-          <time datetime="2023-10-17" class="p2"
+          <time class="p2"
           style="border-radius: 100px;
                  border: 1px solid var(--Grey);
                  padding: 8px 16px"
@@ -112,7 +112,9 @@ showPosts = (index) => {
         <h5>${heading}</h5>
         <p class="p1">${body}</p>
       </div>
-      <img src="./images/portfolio/item${1}/post${1}.png" class="post-img"/>
+      <img src="./images/portfolio/item${id + 1}/post${
+      index + 1
+    }.png" class="post-img"/>
     </li>
     `;
   });

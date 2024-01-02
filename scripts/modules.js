@@ -400,7 +400,7 @@ class Portfolio extends React.Component {
 
   renderModules(arr) {
     this.resetOpened(arr);
-    console.log("changed");
+    console.debug("changed");
     // console.log(this.state.opened);
     return arr.map(({ heading, data }, index) => {
       return (

@@ -1,10 +1,19 @@
+html {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
 }
-* button:hover {
+* button {
+  transition: 0.25s;
   cursor: pointer;
 }
+* button:not(.module-heading button):hover {
+  background-color: var(--Blue) !important;
+  color: var(--White) !important;
+}
+
 * a {
   text-decoration: none;
   color: unset;
@@ -95,7 +104,8 @@ h4 {
   line-height: 120%;
 }
 h5 {
-  font-size: 1.5rem;
+  font-size: 27px;
+  line-height: 120%;
 }
 h6 {
   font-size: 1rem;
@@ -124,13 +134,13 @@ h6 {
   font-style: normal;
   font-weight: 400;
 }
-#header-links a {
+#header-links > li:not(:nth-child(5)) > a {
   color: var(--Black);
   line-height: 120%;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-#header-links a:hover {
+#header-links > li:not(:nth-child(5)) > a:hover {
   border-bottom: 1px solid black;
 }
 /* --------------------------------------------- */
@@ -181,7 +191,27 @@ h6 {
   grid-column: 1/9;
   position: relative;
   max-width: max-content;
-  display: inline;
+  display: flex;
+  gap: 50px;
+  animation-name: digital;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+  transition: 0.25s;
+  color: var(--Yellow);
+}
+@keyframes digital {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+.digital-container {
+  border-block: 1px solid var(--Yellow);
+  transition: 0.5s;
 }
 .digital::after,
 .digital::before {
@@ -189,7 +219,7 @@ h6 {
   width: 72px;
   content: "";
   display: inline;
-  background: url("../images/digital-arrow.svg");
+  background-image: url("../images/digital-arrow.svg");
 }
 .digital::before {
   float: inline-start;
@@ -197,16 +227,17 @@ h6 {
 .digital::after {
   float: inline-end;
 }
-.digital-1 {
-  color: var(--Yellow);
+.digital-container:hover .digital::after,
+.digital-container:hover .digital::before {
+  background-image: url("../images/digital-arrow-white.svg") !important;
 }
-.digital-2 {
-  color: var(--White);
+.digital-container:hover {
   background-color: var(--Yellow);
+  cursor: pointer;
 }
-.digital-2::after,
-.digital-2::before {
-  background: url("../images/digital-arrow-white.svg") !important;
+.digital-container:hover .digital {
+  background: none;
+  color: var(--White);
 }
 
 .swiper-slide {

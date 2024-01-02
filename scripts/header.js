@@ -23,7 +23,7 @@ class Header extends React.Component {
     this.state = "state test";
   }
   render() {
-    console.log(this.state);
+    console.debug(this.state);
     return (
       <header>
         <div className="container" style={{ paddingBlock: "20px" }}>
@@ -32,27 +32,29 @@ class Header extends React.Component {
           </div>
           <ul id="header-links">
             <li>
-              <a href="">О Нас</a>
+              <a href="#about">О Нас</a>
             </li>
             <li>
-              <a href="">Услуги</a>
+              <a href="#services">Услуги</a>
             </li>
             <li>
-              <a href="">Школа</a>
+              <a href="#school">Школа</a>
             </li>
             <li>
-              <a href="">Портфолио</a>
+              <a href="#portfolio">Портфолио</a>
             </li>
             <li>
-              <button
-                className="yellow-btn"
-                style={{
-                  paddingBlock: "15px",
-                  fontFamily: "Nunito Sans",
-                }}
-              >
-                Наши контакты
-              </button>
+              <a href="#contacts">
+                <button
+                  className="yellow-btn"
+                  style={{
+                    paddingBlock: "15px",
+                    fontFamily: "Nunito Sans",
+                  }}
+                >
+                  Наши контакты
+                </button>
+              </a>
             </li>
             <li style={{ flexGrow: 1 }}>
               <button
