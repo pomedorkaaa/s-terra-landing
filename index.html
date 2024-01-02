@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./scripts/header.js" type="text/babel"></script>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <!-- <link rel="stylesheet" href="./scripts/swiper/swiper.css"> -->
@@ -14,7 +24,8 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header>
+    <div id="header"></div>
+    <!-- <header>
       <div class="container" style="padding-block: 20px">
         <div id="logo-header">
           <svg
@@ -64,7 +75,7 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
     <main>
       <!-- Добро пожаловать -->
       <div class="container" style="position: relative">
@@ -247,19 +258,47 @@
             возрасту и уровню.</span
           >
         </p>
-        <div class="modules" style="grid-column: 1/5">
-          <div class="auditory-btns">
-            <button
-              id="auditory-btn-kids"
-              class="auditory-btn-active"
-              onclick="changeAuditory(0)"
-            >
-              Для детей
-            </button>
-            <button id="auditory-btn-adults" onclick="changeAuditory(1)">
-              Для взрослых
-            </button>
+        <div id="modules" style="grid-column: 1/5">
+          <script src="./scripts/modules.js" type="text/babel"></script>
+        </div>
+        <div class="course-features" style="grid-column: 5/9">
+          <img src="./images/features-img.png" alt="" />
+          <div id="features">
+            <p>Особенности курса:</p>
+            <ul>
+              <li>
+                <p class="p1 semibold">Практический подход:</p>
+                <p class="p2">
+                  Упор на практические навыки с реальными проектами и заданиями.
+                </p>
+              </li>
+              <li>
+                <p class="p1 semibold">Индивидуальный подход</p>
+                <p class="p2">
+                  Маленькие группы для обеспечения индивидуального внимания
+                  каждому студенту.
+                </p>
+              </li>
+              <li>
+                <p class="p1 semibold">Опытные менторы</p>
+                <p class="p2">
+                  Опытные разработчики и инструкторы, которые активно работают в
+                  индустрии.
+                </p>
+              </li>
+              <li>
+                <p class="p1 semibold">Гибкий график</p>
+                <p class="p2">
+                  Возможность выбора удобного времени занятий для совмещения с
+                  работой или учёбой.
+                </p>
+              </li>
+            </ul>
           </div>
+          <button class="yellow-btn">
+            Забронировать курс с 15% скидкой!
+            <img src="./images/digital-arrow-white.svg" alt="" />
+          </button>
         </div>
       </div>
       <!-- Digital 2 -->
