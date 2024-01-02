@@ -10,14 +10,18 @@ html {
   transition: 0.25s;
   cursor: pointer;
 }
-* button:not(.module-heading button):hover {
-  background-color: var(--Blue) !important;
-  color: var(--White) !important;
+* button:not(.module-heading button, .portfolio-ul li button):hover {
+  background-color: var(--Blue);
+  color: var(--White);
+}
+* button:not(.module-heading button, .portfolio-ul li button):active {
+  background-color: var(--Yellow);
 }
 
 * a {
   text-decoration: none;
   color: unset;
+  transition: 0.1s;
 }
 
 :root {
@@ -142,7 +146,12 @@ h6 {
   border-bottom: 1px solid transparent;
 }
 #header-links > li:not(:nth-child(5)) > a:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--Blue);
+  color: var(--Blue);
+}
+#header-links > li:not(:nth-child(5)) > a:active {
+  border-bottom: 1px solid var(--Yellow);
+  color: var(--Yellow);
 }
 /* --------------------------------------------- */
 .br {
@@ -188,12 +197,13 @@ h6 {
 .digital {
   text-align: center;
   margin-block: 50px;
-  margin-inline: auto;
-  grid-column: 1/9;
-  position: relative;
-  max-width: max-content;
+  /* margin-inline: auto; */
+  /* grid-column: 1/9; */
+  /* position: relative; */
+  max-width: fit-content;
   display: flex;
   gap: 50px;
+  text-wrap: nowrap;
   animation-name: digital;
   animation-duration: 8s;
   animation-iteration-count: infinite;
@@ -484,12 +494,22 @@ h6 {
 .footer-links h5 > a {
   border-bottom: 1px solid transparent;
 }
-.footer-links h5 > a:hover {
-  border-bottom: 1px solid var(--Black);
+.footer-links h5 > a:hover,
+.copyrights a:hover {
+  color: var(--Blue);
+  border-bottom: 1px solid var(--Blue);
+}
+.footer-links h5 > a:active,
+.copyrights a:active {
+  color: var(--Yellow);
+  border-bottom: 1px solid var(--Yellow);
 }
 .footer-links rect {
   transition: 0.25s;
 }
 .footer-links svg:hover rect {
+  fill: var(--Blue);
+}
+.footer-links svg:active rect {
   fill: var(--Yellow);
 }

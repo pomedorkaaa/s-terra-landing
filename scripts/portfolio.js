@@ -29,7 +29,7 @@ list = [
     item: "Консалтинг",
     posts: [
       {
-        date: "17 о234ктября",
+        date: "17 октября",
         inDev: true,
         heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
@@ -40,19 +40,19 @@ list = [
     item: "Фронт Энд Разработка",
     posts: [
       {
-        date: "17 234октября",
+        date: "17 октября",
         inDev: true,
         heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
       },
       {
-        date: "17 о234rктября",
+        date: "17 октября",
         inDev: true,
         heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
       },
       {
-        date: "17 о234rктября",
+        date: "17 октября",
         inDev: true,
         heading: "IT Profy: Консалтинг /Создание дизайна / Вёрстка ",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
@@ -63,7 +63,7 @@ list = [
     item: "UX/UI Дизайн",
     posts: [
       {
-        date: "17 окт23e4rября",
+        date: "17 октября",
         inDev: true,
         heading: "Lorem ipsum dolor hsdkbfkwbkhfbkf ",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
@@ -74,13 +74,13 @@ list = [
     item: "Графический дизайн",
     posts: [
       {
-        date: "172345 октября",
+        date: "17 октября",
         inDev: true,
         heading: "ОНОООООООООО",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
       },
       {
-        date: "172345 октября",
+        date: "17 октября",
         inDev: true,
         heading: "РАБОООТАААЕЕЕЕТ",
         body: "In today's digital era, Facebook Ads are an indispensable part of your marketing strategy. These ads precisely target and reach audiences by demographics, interests, and prior engagement with your content.",
