@@ -259,8 +259,8 @@ h6 {
   flex-direction: column;
   gap: 20px;
 }
-.swiper-slide:nth-child(3n) {
-  max-width: 281px;
+.slide-3n {
+  max-width: 281px !important;
 }
 .slider-img {
   max-height: fit-content;
@@ -323,7 +323,7 @@ h6 {
   grid-column: 1/9;
 }
 .slider-nav button {
-  background-color: var(--Yellow);
+  background-color: var(--Grey);
   border: none;
   width: 64px;
   height: 44px;

@@ -30,7 +30,7 @@ swiper_wrapper = document.getElementById("swiper-wrapper");
 
 services.map(({ h5, p }, index) => {
   swiper_wrapper.innerHTML += `
-  <li class="swiper-slide">
+  <li class='swiper-slide ${(index + 1) % 3 == 0 ? "slide-3n" : ""}'>
     <a href="#" >
       <div class="slider-img">
         <img src="./images/slide-${index + 1}.png" alt="">
