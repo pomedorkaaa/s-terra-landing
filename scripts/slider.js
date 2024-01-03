@@ -1,10 +1,6 @@
 const swiper = new Swiper(".slider", {
   slidesPerView: "auto",
-  // centeredSlides: true,
   loop: true,
-  // loopAddBlankSlides: true,
-  loopAdditionalSlides: 2,
-  // normalizeSlideIndex: false,
   spaceBetween: 25,
   pagination: {
     el: ".swiper-pagination",
