@@ -2,6 +2,9 @@ html {
   /*  */
   overflow-x: hidden;
 }
+body {
+  position: relative;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +13,25 @@ html {
   transition: 0.25s;
   cursor: pointer;
 }
-* button:not(.module-heading button, .portfolio-ul li button):hover {
+*
+  button:not(
+    .module-heading button,
+    .portfolio-ul li button,
+    .auditory-btns button,
+    #modal-close
+  )
+  :hover {
   background-color: var(--Blue);
-  color: var(--White);
+  color: var(--White) !important;
 }
-* button:not(.module-heading button, .portfolio-ul li button):active {
+*
+  button:not(
+    .module-heading button,
+    .portfolio-ul li button,
+    .auditory-btns button,
+    #modal-close
+  )
+  :active {
   background-color: var(--Yellow);
 }
 
@@ -32,8 +49,8 @@ html {
   --Blue: #4c5bd2;
   --Red: #ff2d57;
 
-  --Yellow-rgb: 255, 173, 50;
   --Blue-rgb: 76, 91, 210;
+  --Black-rgb: 26, 26, 26;
 }
 
 p {
@@ -42,10 +59,12 @@ p {
   font-style: normal;
   font-weight: 400;
 }
-.p1 {
+.p1,
+.modal-form input::placeholder {
   font-family: Nunito Sans;
   font-size: 18px;
   line-height: 130%;
+  color: inherit;
 }
 .p1.semibold {
   font-weight: 600;
@@ -351,7 +370,20 @@ h6 {
   font-size: 27px;
   font-family: Unbounded;
   padding-block: 25px;
+  transition: 0.15s;
   width: 100%;
+}
+.auditory-btns button:hover,
+.modal-form > button:hover,
+#modal-done-state > button:hover {
+  border: 1px solid var(--Blue) !important;
+  color: var(--Blue) !important;
+}
+.auditory-btns button:active,
+.modal-form > button:active,
+#modal-done-state > button:active {
+  border: 1px solid var(--Yellow) !important;
+  color: var(--Yellow) !important;
 }
 .auditory-btn-active {
   border: 1px solid var(--Yellow) !important;
@@ -512,4 +544,141 @@ h6 {
 }
 .footer-links svg:active rect {
   fill: var(--Yellow);
+}
+/* ---------------- */
+#modal {
+  z-index: -10;
+  opacity: 0;
+  transition: 0.5s;
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  background-color: rgba(var(--Black-rgb), 0.5);
+  display: flex;
+}
+.modal-container {
+  max-width: 1200px;
+  width: 100%;
+  height: 466px;
+  background-color: var(--White);
+  margin: auto;
+  padding: 50px;
+  position: relative;
+  display: flex;
+}
+#modal-form-state {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.modal-deco {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.modal-deco img {
+  height: 70px;
+  margin-bottom: 50px;
+}
+.modal-deco h4 {
+  margin-bottom: 25px;
+}
+#modal-close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  right: 25px;
+  background: none;
+  border: none;
+}
+.modal-show {
+  z-index: 10 !important;
+  opacity: 1 !important;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: start;
+}
+.modal-form input {
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  border-bottom: 1px solid var(--Grey);
+}
+.modal-privacy {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding-inline: 25px;
+}
+.modal-privacy input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.modal-privacy input:checked + label:after {
+  opacity: 1;
+}
+.modal-privacy input:not(:checked) + label:after {
+  opacity: 0;
+}
+.modal-privacy label {
+  padding-left: 29px;
+  position: relative;
+}
+.modal-privacy label::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0px;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/modal-checkbox/unchecked.svg");
+}
+.modal-privacy label::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0px;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/modal-checkbox/checked.svg");
+}
+.modal-privacy label > a:hover {
+  color: var(--Blue);
+  text-decoration: underline;
+}
+.modal-privacy label > a:active {
+  color: var(--Yellow);
+}
+.modal-form > button,
+#modal-done-state > button {
+  padding: 15px 25px;
+  border: 1px solid var(--Yellow);
+  background: none;
+  color: var(--Yellow);
+  max-width: fit-content;
+}
+.modal-form-done {
+  transition: 0.5s;
+  opacity: 0;
+  z-index: -10;
+  display: none !important;
+}
+#modal-done-state {
+  display: none;
+}
+.modal-done-state {
+  background-color: var(--White);
+  margin: auto;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }

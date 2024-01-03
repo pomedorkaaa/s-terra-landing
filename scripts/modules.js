@@ -387,20 +387,16 @@ class Portfolio extends React.Component {
     super(props);
     this.state = {
       isKidsModule: true,
-      opened: [],
+      opened: null,
     };
   }
 
-  resetOpened(arr) {
-    this.state.opened = [];
-    arr.map(() => {
-      this.state.opened.push(0);
-    });
-  }
+  // componentDidUpdate() {
+  //   console.log(`открыт ${this.state.opened} модуль`);
+  // }
 
   renderModules(arr) {
-    this.resetOpened(arr);
-    console.debug("changed");
+    // console.debug("changed");
     // console.log(this.state.opened);
     return arr.map(({ heading, data }, index) => {
       return (
@@ -415,32 +411,31 @@ class Portfolio extends React.Component {
                 let btn = document.getElementById(event.target.id);
                 const modules =
                   btn.parentElement.parentElement.parentElement.children;
-                const moduleActive =
-                  btn.parentElement.parentElement.children[1];
+                const moduleActive = btn.parentElement.nextElementSibling;
 
-                if (this.state.opened[btn_id] == 0) {
-                  for (let i = 0; i < this.state.opened.length; i++) {
-                    this.state.opened[i] = 0;
-                  }
-                  for (let i = 0; i < modules.length; i++) {
-                    modules[i].children[1].classList.remove("module-active");
-                    modules[i].children[1].style.maxHeight = 0;
-                    modules[i].children[0].children[1].classList.remove(
+                // console.log(modules);
+
+                let op = this.state.opened;
+
+                if (op != btn_id) {
+                  if (op != null) {
+                    modules[op].children[1].classList.remove("module-active");
+                    modules[op].children[1].style.maxHeight = 0;
+                    modules[op].children[0].children[1].classList.remove(
                       "module-btn-active"
                     );
                   }
-                  this.state.opened[btn_id] = 1;
+
+                  this.setState({ opened: btn_id });
                   moduleActive.classList.add("module-active");
                   moduleActive.style.maxHeight = `${moduleActive.scrollHeight}px`;
                 } else {
-                  this.state.opened[btn_id] = 0;
+                  this.setState({ opened: null });
                   moduleActive.classList.remove("module-active");
                   moduleActive.style.maxHeight = 0;
                 }
 
                 btn.classList.toggle("module-btn-active");
-                // console.log(modules);
-                console.log(this.state.opened);
               }}
             ></button>
           </div>
@@ -469,8 +464,7 @@ class Portfolio extends React.Component {
             id="auditory-btn-kids"
             onClick={() => {
               // console.log(event.target.id);
-              this.setState({ isKidsModule: true });
-              this.resetOpened(modulesKids);
+              this.setState({ isKidsModule: true, opened: null });
               console.log(this.state.opened);
             }}
             className={this.state.isKidsModule ? "auditory-btn-active" : ""}
@@ -480,8 +474,7 @@ class Portfolio extends React.Component {
           <button
             id="auditory-btn-adults"
             onClick={() => {
-              this.setState({ isKidsModule: false });
-              this.resetOpened(modulesAdults);
+              this.setState({ isKidsModule: false, opened: null });
               console.log(this.state.opened);
             }}
             className={this.state.isKidsModule ? "" : "auditory-btn-active"}

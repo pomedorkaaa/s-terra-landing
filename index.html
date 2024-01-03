@@ -14,7 +14,7 @@
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="./scripts/header.js" type="text/babel"></script>
-
+    <script src="./scripts/modal.js" type="text/babel"></script>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <!-- <link rel="stylesheet" href="./scripts/swiper/swiper.css"> -->
@@ -25,7 +25,64 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <!--  -->
+    <!-- Сделаем это! -->
+    <div id="modal">
+      <div class="modal-container">
+        <button id="modal-close" onclick="closeModal()">
+          <img src="./images/modal-close.svg" alt="" />
+        </button>
+        <div id="modal-form-state">
+          <div class="modal-deco">
+            <img src="./images/s-terra-logo.svg" alt="" />
+            <h4>Сделаем это!</h4>
+            <p class="p1">
+              Мы всегда рады услышать от вас! Если у вас есть вопросы,
+              предложения или вы хотите получить дополнительную информацию о
+              наших услугах, пожалуйста, заполните эту форму. Наша команда
+              свяжется с вами как можно скорее.
+            </p>
+          </div>
+          <form class="modal-form" id="modal-form">
+            <input type="text" name="name" id="" placeholder="Имя" />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="E-mail"
+              required
+            />
+            <input type="tel" name="phone" id="" placeholder="Телефон" />
+            <div class="modal-privacy">
+              <input
+                type="checkbox"
+                name=""
+                id="modal-privacy-checkbox"
+                required
+              />
+              <label for="modal-privacy-checkbox" class="p2"
+                >Я согласен на обработку моих персональных данных в соответствии
+                с
+                <a
+                  href="#"
+                  onclick="document.getElementById('modal').classList.remove('modal-show')"
+                  >политикой конфиденциальности</a
+                >.</label
+              >
+            </div>
+            <button type="submit" class="p1" id="modal-submit">
+              Отправить данные
+            </button>
+          </form>
+        </div>
+        <div id="modal-done-state">
+          <h4>Спасибо!</h4>
+          <p class="p1">
+            Ваша заявка принята! Мы Вам перезвоним через пару минут
+          </p>
+          <button class="p1" onclick="closeModal()">На главную страницу</button>
+        </div>
+      </div>
+    </div>
     <div id="header"></div>
     <!-- <header>
       <div class="container" style="padding-block: 20px">
@@ -163,10 +220,12 @@
           </li>
         </ul>
       </div>
+
       <!-- Digital -->
-      <div class="digital-container">
+      <div class="digital-container" onclick="showModal()">
         <h3 class="digital">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
+
       <!-- Услуги -->
       <div
         id="services"
@@ -302,14 +361,14 @@
               </li>
             </ul>
           </div>
-          <button class="yellow-btn">
+          <button class="yellow-btn" onclick="showModal()">
             Забронировать курс с 15% скидкой!
             <img src="./images/digital-arrow-white.svg" alt="" />
           </button>
         </div>
       </div>
       <!-- Digital -->
-      <div class="digital-container">
+      <div class="digital-container" onclick="showModal()">
         <h3 class="digital">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
       <!-- Наше портфолио -->
@@ -336,7 +395,7 @@
         <script id="portfolio-ul-print" src="./scripts/portfolio.js"></script>
       </div>
       <!-- Digital -->
-      <div class="digital-container">
+      <div class="digital-container" onclick="showModal()">
         <h3 class="digital">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
       <!-- Контакты -->
