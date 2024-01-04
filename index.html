@@ -13,7 +13,6 @@
       src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="./scripts/header.js" type="text/babel"></script>
     <script src="./scripts/modal.js" type="text/babel"></script>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -83,51 +82,65 @@
         </div>
       </div>
     </div>
-    <div id="header"></div>
+
+    <header id="header" class="container">
+      <div id="logo-header">
+        <img src="./images/header-logo.svg" alt="" />
+      </div>
+      <ul class="header-links">
+        <li>
+          <a href="#about">О Нас</a>
+        </li>
+        <li>
+          <a href="#services">Услуги</a>
+        </li>
+        <li>
+          <a href="#school">Школа</a>
+        </li>
+        <li>
+          <a href="#portfolio">Портфолио</a>
+        </li>
+        <li>
+          <a href="#contacts">
+            <button
+              class="yellow-btn"
+              style="padding-block: 15px; font-family: Nunito Sans"
+            >
+              Наши контакты
+            </button>
+          </a>
+        </li>
+        <li id="lang-btn">
+          <button>EN</button>
+        </li>
+      </ul>
+    </header>
+
     <main>
       <!-- Добро пожаловать -->
-      <div class="container" style="position: relative">
-        <h3 style="text-indent: 280px; display: inline-block; grid-column: 1/9">
+      <div id="wellcome" class="container">
+        <h3 class="grid-full text-indent">
           Добро пожаловать в
-          <span style="color: var(--Yellow); text-wrap: nowrap"
-            >S-terra Software</span
-          >
+          <span>S-terra Software</span>
           – надежного партнера в мире IT.
         </h3>
-        <p
-          class="p2"
-          style="position: absolute; bottom: 10px; right: 0; grid-column: 6/9"
-        >
+        <p class="p2">
           Мы создаем инновации сегодня для технологий завтрашнего дня,
           предвосхищая будущие тенденции и требования, чтобы наши клиенты всегда
           были на переднем крае прогресса
         </p>
       </div>
-      <img
-        class="container"
-        style="margin-top: 25px; margin-bottom: 50px"
-        src="./images/IMG-1.png"
-        alt=""
-      />
+      <img class="container" src="./images/IMG-1.png" alt="" />
 
       <!-- Почему S-Terra Soft -->
-      <div
-        id="about"
-        class="container"
-        style="row-gap: 50px; margin-block: 100px"
-      >
+      <div id="about" class="container">
         <div class="br">
           <p>О нас</p>
           <p>О нас</p>
         </div>
-        <h3 style="grid-column: 2/9; text-align: center">
-          <span style="color: var(--Yellow)">Почему</span>S-terra Soft?
-        </h3>
-        <div style="grid-column: 1/5">
-          <h4>
-            Мы сов
-            <span style="color: var(--Grey)">мещаем опыт и новаторство</span>
-          </h4>
+        <h3 class="grid-middle"><span>Почему</span> S-terra Soft?</h3>
+        <div class="grid-first-half">
+          <h4>Мы сов<span>мещаем опыт и новаторство</span></h4>
           <p class="p1" style="margin-top: 25px">
             Мы разрабатываем передовые IT-решения, которые формируют цифровое
             будущее. Наш подход основан на инновациях, качестве, надежности и
@@ -138,7 +151,7 @@
             предоставляя инновационные и эффективные продукты.
           </p>
         </div>
-        <img style="grid-column: 5/9" src="./images/IMG-2.png" alt="" />
+        <img class="grid-second-half" src="./images/IMG-2.png" alt="" />
         <ul id="block-two-ul">
           <li>
             <h4>120+</h4>
@@ -177,25 +190,14 @@
       </div>
 
       <!-- Услуги -->
-      <div
-        id="services"
-        class="container"
-        style="row-gap: 50px; margin-block: 100px"
-      >
+      <div id="services" class="container">
         <div class="br">
           <p>Услуги</p>
           <p>Услуги</p>
         </div>
-        <h3 style="grid-column: 2/9; text-align: center">
-          <span style="color: var(--Yellow)">Услуги</span> S-terra Soft
-        </h3>
-
-        <div class="swiper slider container" style="row-gap: 50px">
-          <ul
-            id="swiper-wrapper"
-            class="swiper-wrapper"
-            style="grid-column: 1/9; row-gap: 25px"
-          >
+        <h3 class="grid-middle"><span>Услуги</span> S-terra Soft</h3>
+        <div class="swiper slider container">
+          <ul id="swiper-wrapper" class="swiper-wrapper">
             <script id="services-print" src="./scripts/services.js"></script>
           </ul>
           <div class="slider-nav">
@@ -247,37 +249,25 @@
           </div>
         </div>
       </div>
+
       <!-- Школа Фронтенда -->
-      <div
-        id="school"
-        class="container"
-        style="row-gap: 50px; margin-block: 100px"
-      >
+      <div id="school" class="container">
         <div class="br">
           <p>Школа</p>
           <p>Школа</p>
         </div>
-        <h3 style="grid-column: 2/9; text-align: center">
-          <span style="color: var(--Yellow)">Школа</span> Фронтенд-а
-        </h3>
-        <p
-          style="
-            grid-column: 1/9;
-            font-size: 27px;
-            font-family: Unbounded;
-            text-indent: 320px;
-          "
-        >
-          В нашей школе фронтенд-програ<span style="color: var(--Grey)"
+        <h3 class="grid-middle"><span>Школа</span> Фронтенд-а</h3>
+        <h5 class="text-indent grid-full">
+          В нашей школе фронтенд-програ<span
             >ммирования предлагаются высококачественные курсы для всех, кто
             хочет освоить востребованное направление в IT. Курсы подходят любому
             возрасту и уровню.</span
           >
-        </p>
-        <div id="modules" style="grid-column: 1/5">
+        </h5>
+        <div id="modules" class="grid-first-half">
           <script src="./scripts/modules.js" type="text/babel"></script>
         </div>
-        <div class="course-features" style="grid-column: 5/9">
+        <div class="course-features grid-second-half">
           <img src="./images/features-img.png" alt="" />
           <div id="features">
             <p>Особенности курса:</p>
@@ -317,55 +307,37 @@
           </button>
         </div>
       </div>
+
       <!-- Digital -->
       <div class="digital-container" onclick="showModal()">
         <h3 class="digital">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
+
       <!-- Наше портфолио -->
-      <div
-        id="portfolio"
-        class="container"
-        style="row-gap: 50px; margin-block: 50px"
-      >
+      <div id="portfolio" class="container">
         <div class="br">
           <p>Портфолио</p>
           <p>Портфолио</p>
         </div>
-        <h3 style="grid-column: 3/9">
-          Наше <span style="color: var(--Yellow)">Портфолио</span>
-        </h3>
-        <ul id="portfolio-ul" class="portfolio-ul">
-          <!-- <li><button on class="p1 portf-btn-active">Все работы</button></li>
-          <li><button class="p1">Консалтинг</button></li>
-          <li><button class="p1">Фронт Энд Разработка</button></li>
-          <li><button class="p1">UX/UI Дизайн</button></li> -->
-          <!-- <li><input class="p1">Графический дизайн</input></li> -->
+        <h3 class="grid-middle">Наше <span>Портфолио</span></h3>
+        <ul id="portfolio-ul" class="portfolio-ul"></ul>
+        <ul id="portfolio-posts">
+          <script id="portfolio-ul-print" src="./scripts/portfolio.js"></script>
         </ul>
-        <ul id="portfolio-posts"></ul>
-        <script id="portfolio-ul-print" src="./scripts/portfolio.js"></script>
       </div>
+
       <!-- Digital -->
       <div class="digital-container" onclick="showModal()">
         <h3 class="digital">Давайте создавать мир DIGITAL вместе!</h3>
       </div>
+
       <!-- Контакты -->
-      <div
-        id="contacts"
-        class="container"
-        style="row-gap: 50px; margin-block: 100px"
-      >
+      <div id="contacts" class="container">
         <div class="br">
           <p>Контакты</p>
           <p>Контакты</p>
         </div>
-        <div
-          style="
-            grid-column: 1/5;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-          "
-        >
+        <div class="grid-first-half">
           <h4>Контакты</h4>
           <p class="p1">
             Мы всегда рады услышать от вас! Если у вас есть вопросы, предложения
@@ -457,7 +429,7 @@
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5419.411402380319!2d29.136209003939204!3d47.27527920605608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c959c6237b1083%3A0x83257b1fe1bd1187!2z0JPQvtGB0YLQuNC90LjRh9C90YvQuSDQutC-0LzQv9C70LXQutGBICLQlNGA0YPQttCx0LAi!5e0!3m2!1sru!2s!4v1702678783704!5m2!1sru!2s"
-          style="border: 0; grid-column: 5/9; height: 400px; width: 100%"
+          class="grid-second-half"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -467,8 +439,8 @@
 
     <div class="br"></div>
 
-    <footer style="padding-block: 50px">
-      <div class="container" style="row-gap: 50px">
+    <footer>
+      <div class="container">
         <ul class="footer-links">
           <li>
             <h5><a href="#about">О нас</a></h5>
@@ -486,7 +458,7 @@
             <h5><a href="#contacts">Контакты</a></h5>
           </li>
         </ul>
-        <ul class="footer-links" style="justify-content: center">
+        <ul class="footer-links">
           <li>
             <a href="#">
               <svg
@@ -611,21 +583,9 @@
             </a>
           </li>
         </ul>
-        <div
-          style="
-            grid-column: 1/9;
-            display: flex;
-            flex-direction: row;
-            gap: 50px;
-          "
-        >
-          <p class="p1" style="flex-grow: 1">
-            S-Terra Soft © 2024 All rights reserved.
-          </p>
-          <div
-            class="copyrights"
-            style="display: flex; gap: 50px; flex-direction: row"
-          >
+        <div class="grid-full">
+          <p class="p1">S-Terra Soft © 2024 All rights reserved.</p>
+          <div class="copyrights">
             <a href="#" class="p1">Terms of Use</a>
             <a href="#" class="p1">Privacy Policy</a>
           </div>

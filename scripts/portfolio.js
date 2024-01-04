@@ -99,15 +99,8 @@ showPosts = (id) => {
       <div class="post-info">
         <div class="post-meta">
           <time class="p2"
-          style="border-radius: 100px;
-                 border: 1px solid var(--Grey);
-                 padding: 8px 16px"
           >${date}</time>
-          ${
-            inDev
-              ? `<p class="p2" style="color: var(--Red); padding: 8px 16px">В разработке</p>`
-              : ""
-          }
+          ${inDev ? `<p class="p2">В разработке</p>` : ""}
         </div>
         <h5>${heading}</h5>
         <p class="p1">${body}</p>
