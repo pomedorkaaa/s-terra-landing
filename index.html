@@ -14,6 +14,8 @@
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="./scripts/modal.js" type="text/babel"></script>
+    <!-- <script src="./scripts/adaptiv.js" defer></script> -->
+
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <!-- <link rel="stylesheet" href="./scripts/swiper/swiper.css"> -->
@@ -83,37 +85,37 @@
       </div>
     </div>
 
-    <header id="header" class="container">
-      <div id="logo-header">
-        <img src="./images/header-logo.svg" alt="" />
+    <header class="container" id="header">
+      <div class="grid-full">
+        <div id="logo-header">
+          <img src="./images/header-logo.svg" alt="" />
+        </div>
+        <ul class="header-links">
+          <li>
+            <a href="#about">О Нас</a>
+          </li>
+          <li>
+            <a href="#services">Услуги</a>
+          </li>
+          <li>
+            <a href="#school">Школа</a>
+          </li>
+          <li>
+            <a href="#portfolio">Портфолио</a>
+          </li>
+          <li>
+            <a href="#contacts">
+              <button
+                class="yellow-btn"
+                style="padding-block: 15px; font-family: Nunito Sans"
+              >
+                Наши контакты
+              </button>
+            </a>
+          </li>
+        </ul>
+        <button id="lang-btn" class="p1">EN</button>
       </div>
-      <ul class="header-links">
-        <li>
-          <a href="#about">О Нас</a>
-        </li>
-        <li>
-          <a href="#services">Услуги</a>
-        </li>
-        <li>
-          <a href="#school">Школа</a>
-        </li>
-        <li>
-          <a href="#portfolio">Портфолио</a>
-        </li>
-        <li>
-          <a href="#contacts">
-            <button
-              class="yellow-btn"
-              style="padding-block: 15px; font-family: Nunito Sans"
-            >
-              Наши контакты
-            </button>
-          </a>
-        </li>
-        <li id="lang-btn">
-          <button>EN</button>
-        </li>
-      </ul>
     </header>
 
     <main>
@@ -321,9 +323,8 @@
         </div>
         <h3 class="grid-middle">Наше <span>Портфолио</span></h3>
         <ul id="portfolio-ul" class="portfolio-ul"></ul>
-        <ul id="portfolio-posts">
-          <script id="portfolio-ul-print" src="./scripts/portfolio.js"></script>
-        </ul>
+        <ul id="portfolio-posts"></ul>
+        <script id="portfolio-ul-print" src="./scripts/portfolio.js"></script>
       </div>
 
       <!-- Digital -->
