@@ -36,7 +36,7 @@ services.map(({ h5, p }, index) => {
         <img src="./images/slide-${index + 1}.png" alt="">
       </div>
       <h5>${h5}</h5>
-      <p>${p}</p>
+      <p class="p1">${p}</p>
     </a>
   </li>
   `;
