@@ -520,6 +520,7 @@ img.container {
 .module-heading {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 .module-heading button {
   width: 24px;
@@ -544,6 +545,7 @@ img.container {
   flex-direction: column;
   gap: 25px;
 }
+
 #features {
   padding: 25px;
   border: 1px solid var(--Grey);
@@ -898,6 +900,10 @@ footer .grid-full > p {
   .swiper-slide a > h5 {
     font-size: 150%;
   }
+  .course-features > img {
+    object-fit: cover;
+    height: 330px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -968,6 +974,9 @@ footer .grid-full > p {
   }
   .modal-container {
     min-height: 275px;
+  }
+  .course-features > img {
+    aspect-ratio: 1/1;
   }
   /* -------------header-dropdown----------- */
   #lang-btn {
