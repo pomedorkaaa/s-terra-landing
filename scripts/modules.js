@@ -429,10 +429,12 @@ class Portfolio extends React.Component {
                   this.setState({ opened: btn_id });
                   moduleActive.classList.add("module-active");
                   moduleActive.style.maxHeight = `${moduleActive.scrollHeight}px`;
+                  moduleActive.style.marginTop = "15px";
                 } else {
                   this.setState({ opened: null });
                   moduleActive.classList.remove("module-active");
                   moduleActive.style.maxHeight = 0;
+                  moduleActive.style.marginTop = 0;
                 }
 
                 btn.classList.toggle("module-btn-active");
