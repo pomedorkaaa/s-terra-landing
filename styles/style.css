@@ -520,7 +520,6 @@ img.container {
 .module-heading {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
 }
 .module-heading button {
   width: 24px;
