@@ -6,8 +6,8 @@ window.addEventListener(
   "resize",
   function (event) {
     adaptiv();
-  },
-  true
+  }
+  // true
 );
 
 function adaptiv() {
