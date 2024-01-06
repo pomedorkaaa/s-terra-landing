@@ -59,7 +59,9 @@ body {
     .portfolio-ul li button,
     .auditory-btns button,
     #modal-close,
-    #header-burger
+    #header-burger,
+    #modal-done-state > button,
+    #modal-submit
   ):hover {
   background-color: var(--Blue);
   color: var(--White) !important;
@@ -70,7 +72,9 @@ body {
     .portfolio-ul li button,
     .auditory-btns button,
     #modal-close,
-    #header-burger
+    #header-burger,
+    #modal-done-state > button,
+    #modal-submit
   ):active {
   background-color: var(--Yellow);
 }
@@ -609,22 +613,19 @@ footer > .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* height: 23px; */
   line-height: 1;
   gap: 8px;
   color: var(--Grey);
   transition: 0.23s;
 }
+.portfolio-ul button > svg > path {
+  stroke: var(--Grey);
+}
 .portf-btn-active {
   color: var(--Black) !important;
 }
-.portfolio-ul button::before {
-  height: 24px;
-  width: 24px;
-  content: url("../images/portfolio-ul-inactive.svg");
-}
-.portf-btn-active::before {
-  content: url("../images/portfolio-ul-marker.svg") !important;
+.portf-btn-active > svg > path {
+  stroke: var(--Black) !important;
 }
 
 #portfolio-posts {

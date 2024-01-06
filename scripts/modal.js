@@ -8,10 +8,12 @@ function showModal() {
 
 function closeModal() {
   modal.classList.remove("modal-show");
-  if (modal_done.classList.contains("modal-done-state")) {
-    modal_done.classList.remove("modal-done-state");
-    modal_form.classList.remove("modal-form-done");
-  }
+  setTimeout(() => {
+    if (modal_done.classList.contains("modal-done-state")) {
+      modal_done.classList.remove("modal-done-state");
+      modal_form.classList.remove("modal-form-done");
+    }
+  }, 500);
 }
 
 let form = document.getElementById("modal-form");

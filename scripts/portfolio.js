@@ -124,9 +124,16 @@ activateBtn = (_index) => {
 
 list.map(({ item }, index) => {
   portfolio_ul.innerHTML += `
-  <li><button onclick="showPosts(${index}); activateBtn(${index})" class="p1 ${
+  <li>
+    <button onclick="showPosts(${index}); activateBtn(${index})" class="p1 ${
     index + 1 == 1 ? `portf-btn-active` : ""
-  }">${item}</button></li>
+  }">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
+      <path d="M10.8574 17.0401L15.4289 12.4686L10.8574 7.89722" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    ${item}
+    </button>
+  </li>
   `;
 });
 
