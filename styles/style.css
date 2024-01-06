@@ -966,6 +966,9 @@ footer .grid-full > p {
   .modal-privacy label::after {
     left: -24px;
   }
+  .modal-container {
+    min-height: 275px;
+  }
   /* -------------header-dropdown----------- */
   #lang-btn {
     display: none;
