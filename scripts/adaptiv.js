@@ -1,19 +1,19 @@
 wellcome_h3 = document.getElementById("wellcome").children[0];
-
-// adaptiv();
+burger = document.getElementById("header-burger");
+dropdown_links = document.getElementById("dropdown-links");
 
 window.addEventListener(
   "resize",
   function (event) {
-    // adaptiv();
+    adaptiv();
   },
   true
 );
 
 function adaptiv() {
-  if (window.screen.width < 1270) {
-    wellcome_h3.classList.remove("text-indent");
+  if (window.screen.width < 1024) {
   } else {
-    wellcome_h3.classList.add("text-indent");
+    // burger.classList.remove("burger-opened");
+    // dropdown_links.classList.add("burger-closed");
   }
 }

@@ -1,5 +1,5 @@
 const swiper = new Swiper(".slider", {
-  slidesPerView: "auto",
+  slidesPerView: 1,
   loop: true,
   spaceBetween: 25,
   pagination: {
@@ -15,5 +15,14 @@ const swiper = new Swiper(".slider", {
   },
   autoplay: {
     delay: 5000,
+  },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: "auto",
+    },
+    800: {
+      slidesPerView: 2,
+    },
   },
 });
