@@ -13,7 +13,7 @@ function closeModal() {
       modal_done.classList.remove("modal-done-state");
       modal_form.classList.remove("modal-form-done");
     }
-  }, 500);
+  }, 510);
 }
 
 let form = document.getElementById("modal-form");

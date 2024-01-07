@@ -191,7 +191,7 @@ h4 {
   line-height: 120%;
 }
 span {
-  color: var(--Grey);
+  /* color: var(--Grey); */
 }
 
 h5 {
@@ -202,6 +202,9 @@ h6 {
   font-size: var(--h6);
   font-weight: 400;
   line-height: 120%;
+}
+address {
+  font-style: normal;
 }
 
 #dropdown-links {
@@ -320,26 +323,33 @@ img.container {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: var(--gutter);
+  /* column-gap: var(--gutter); */
 }
 #block-two-ul li {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding-inline: 12.5px;
+  box-sizing: border-box;
 }
-#block-two-ul li:not(:last-child) {
-  border-right: 2px solid var(--Grey);
+#block-two-ul li:not(:first-child) {
+  border-left: 2px solid var(--Grey);
 }
 #block-two-ul li:hover h4,
 #block-two-ul li:hover p {
   transition: 0.25s;
   color: var(--Blue);
 }
+#block-two-ul li:last-child {
+  padding-right: 0;
+}
+#block-two-ul li:first-child {
+  padding-left: 0;
+}
 #about img {
   width: 100%;
   height: 402px;
-  object-position: 0px center;
+  /* object-position: 0px center; */
 }
 
 .digital {
@@ -944,17 +954,7 @@ footer .grid-full > p {
   #block-two-ul h4 {
     font-size: var(--h5);
   }
-  #block-two-ul {
-    column-gap: 0px;
-  }
-  #block-two-ul li:first-child {
-    /* padding-inline: 0; */
-    padding-left: 0;
-  }
-  #block-two-ul li:last-child {
-    /* padding-inline: 0; */
-    padding-right: 0;
-  }
+
   .text-indent {
     text-indent: 0 !important;
   }
@@ -992,6 +992,12 @@ footer .grid-full > p {
   }
   .course-features > img {
     aspect-ratio: 1/1;
+  }
+  #features > ul > li {
+    max-width: calc(var(--column) * 2 + var(--gutter) - 25px);
+  }
+  #features > ul > li > p {
+    word-wrap: break-word;
   }
   /* -------------header-dropdown----------- */
   #lang-btn {
@@ -1129,6 +1135,7 @@ footer .grid-full > p {
     border-right: none;
   }
   #block-two-ul li:nth-child(3) {
+    border-left: none;
     padding-left: 0;
   }
   #about img {
@@ -1147,12 +1154,6 @@ footer .grid-full > p {
   }
   #features {
     padding: 15px;
-  }
-  #features > ul > li {
-    max-width: calc(var(--column) * 2 + var(--gutter) - 15px);
-  }
-  #features > ul > li > p {
-    word-wrap: break-word;
   }
 
   #portfolio-ul {
