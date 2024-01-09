@@ -1,6 +1,6 @@
 :root {
   --Black: #1a1a1a;
-  --Yellow: #ffad32;
+  --Yellow: #ffa825;
   --White: #ffffff;
   --Grey: #dadada;
   --Blue: #4c5bd2;
@@ -17,18 +17,6 @@
   --gutter: 25px;
 
   --column-1600: 128px;
-
-  --1024-block: 98px;
-  --1024-cols: 8;
-  --1024-max-w: calc(1024px - 64px);
-
-  --768-block: 97px;
-  --768-cols: 6;
-  --768-max-w: calc(768px - 64px);
-
-  --375-block: 59px;
-  --375-cols: 4;
-  --375-max-w: calc(375px - 64px);
 
   --h4: 40.5px;
   --h5: 27px;
@@ -491,7 +479,7 @@ img.container {
   height: fit-content;
 }
 .slider-nav button {
-  background-color: var(--Grey);
+  background-color: var(--Yellow);
   border: none;
   width: 64px;
   height: 44px;
