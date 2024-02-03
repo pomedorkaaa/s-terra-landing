@@ -178,9 +178,6 @@ h4 {
   font-size: 40.5px;
   line-height: 120%;
 }
-span {
-  /* color: var(--Grey); */
-}
 
 h5 {
   font-size: var(--h5);
@@ -206,19 +203,24 @@ address {
   background-color: var(--White);
 }
 #header > .container {
-  padding-block: 0;
+  margin-block: auto;
+  padding: 0;
+  height: 100%;
 }
 #header .grid-full {
-  padding-block: 20px;
+  /* padding-block: 20px; */
+  height: 94px;
   margin-block: 0;
   display: flex;
   gap: 50px;
   justify-content: space-between;
+  align-items: center;
   z-index: 10;
   background-color: var(--White);
 }
 
 #logo-header {
+  height: 65px;
   grid-column-end: 3;
   grid-column-start: 1;
 }
@@ -244,6 +246,7 @@ address {
 }
 .header-links .yellow-btn {
   font-family: "Nunito Sans";
+  padding-top: 15px;
 }
 .header-links > li:not(:nth-child(5)) > a {
   color: var(--Black);
@@ -581,6 +584,9 @@ img.container {
 }
 #features ul > li > .p2 {
   margin-top: 25px;
+}
+.course-features .yellow-btn {
+  text-align: left;
 }
 
 .contacts-ul {
