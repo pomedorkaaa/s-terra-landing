@@ -246,7 +246,7 @@ address {
 }
 .header-links .yellow-btn {
   font-family: "Nunito Sans";
-  padding-top: 15px;
+  padding-block: 15px;
 }
 .header-links > li:not(:nth-child(5)) > a {
   color: var(--Black);
