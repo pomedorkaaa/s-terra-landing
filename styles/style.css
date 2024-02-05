@@ -401,6 +401,9 @@ img.container {
   color: var(--White);
 }
 
+.swiper {
+  overflow: visible;
+}
 .slider {
   padding-block: 0;
 }
@@ -467,7 +470,7 @@ img.container {
   width: 16px !important;
   height: 16px !important;
   background-color: var(--Grey) !important;
-  opacity: 0.5 !important;
+  opacity: 1 !important;
 }
 .swiper-pagination-bullet-active {
   background-color: var(--Black) !important;
@@ -481,11 +484,11 @@ img.container {
   margin-inline: auto;
   height: fit-content;
 }
-.slider-nav button {
+.slider-nav > button {
   background-color: var(--Yellow);
   border: none;
-  width: 64px;
-  height: 44px;
+  min-width: 64px;
+  min-height: 44px;
   margin: 0;
   padding: 10px 20px;
   position: unset;
@@ -789,7 +792,7 @@ footer .grid-full > p {
 }
 .modal-form input {
   width: 100%;
-  padding: 15px 25px;
+  padding: 15px 10px;
   border: none;
   border-bottom: 1px solid var(--Grey);
 }
@@ -797,7 +800,7 @@ footer .grid-full > p {
   display: flex;
   gap: 5px;
   justify-content: center;
-  padding-inline: 25px;
+  padding-inline: 10px;
 }
 .modal-privacy input {
   position: absolute;
@@ -1079,17 +1082,23 @@ footer .grid-full > p {
 @media (max-width: 780px) {
   :root {
     /* --Yellow: red; */
-    --column: 59px;
+    --column: 67px;
     --cols: 4;
-    --max-w: calc(375px - 64px);
+    --max-w: calc(375px - 32px);
   }
+
   .swiper-slide,
   .slide-3n {
-    width: calc(var(--column) * 4 + var(--gutter) * 3);
+    width: 311px;
   }
-  .slider-nav,
+  .slider-nav {
+    width: 100%;
+    gap: 0;
+  }
   .swiper-pagination {
-    gap: 10px;
+    gap: unset;
+    max-width: 100%;
+    justify-content: space-evenly;
   }
   h3:not(.digital) {
     font-size: var(--h4);
@@ -1101,7 +1110,7 @@ footer .grid-full > p {
     padding-block: 50px;
   }
   #wellcome.container {
-    gap: 10px;
+    row-gap: 10px;
   }
   #wellcome > .p2 {
     position: unset;

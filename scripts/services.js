@@ -2,27 +2,27 @@
 services = [
   {
     h5: "Обучение frontend специалистов",
-    p: "Is your business maximising its potential using Influencer marketing? Whether you're managing yours in-house, or are currently working with an influencer marketing agency then we can help you drastically improve your results.",
+    p: "Ключ к владению современными технологиями разработки веб-интерфейсов. Наши курсы охватывают HTML, CSS, JavaScript и популярные фреймворки, обеспечивая ученикам навыками, необходимыми для успешной карьеры в IT. Присоединяйтесь к нам и станьте экспертом в создании уникальных и инновационных веб-приложений!",
   },
   {
     h5: "Консалтинг веб проектов",
-    p: "In 2022, marketing your brand on TikTok is a must. Utilising the viral growth, their advertising platform, and the ability to get your business in front of millions - it's time to take advantage. Whether you're managing yours in-house, or are currently working with a TikTok Marketing agency, then we can help you drastically improve your results.",
+    p: "Эффективный консалтинг для ваших веб-проектов: оптимизируйте свои онлайн инициативы с нашей экспертной поддержкой. Независимо от того, нужен ли вам аудит текущего проекта, разработка стратегии или техническое руководство — мы обеспечим вас ключевыми решениями для успеха вашего веб-проекта. С нами вы  достигните выдающихся результатов!",
   },
   {
     h5: "Графический дизайн",
-    p: "Are you lacking a social strategy that's driving your brand forward? Our team knows how to craft always-on and campaign strategies to elevate your content & community across your organic social channels.",
+    p: "Воплощение идей в визуальную гармонию: графический дизайн с искусством и профессионализмом. Наши творческие дизайнеры воплотят вашу концепцию в уникальные графические решения. От логотипов до макетов веб-сайтов — мы создаем эстетически привлекательные и функциональные дизайны, которые подчеркивают уникальность вашего бренда. Доверьтесь нам вопросы графического дизайна и подчеркните свою индивидуальность в визуальном мире.",
   },
   {
     h5: "Создание дизайна веб/Моб проектов",
-    p: "Not happy with your existing performance and looking for a partner that can drive sustainable growth that delivers incrementality in site-wide performance and brand uplift?We leverage the major social platforms with platform-specific performance creative to drive performance at all stages of the funnel.",
+    p: "Современный дизайн, увлекательный пользовательский опыт: наша команда занимается разработкой веб- и мобильных дизайнов, сочетая творчество с технической компетенцией. Мы создаем эстетически привлекательные интерфейсы, учитывая последние тренды и потребности вашей целевой аудитории. Мы превратим вашу концепцию в стильный и интуитивно понятный дизайн, который заставит ваш проект выделяться среди конкурентов.",
   },
   {
     h5: "Вёрстка дизайна",
-    p: "Is your social content uninspiring, not platform-specific or lacking in creativity? Whether it's social-first video content, photography or design - we're ready to help take your brand to the next level.",
+    p: "От концепции до кода: наша команда профессионалов занимается вёрсткой дизайна, превращая творческие идеи в интерактивные веб-страницы. Мы уделяем внимание каждой детали, обеспечивая не только визуальное восприятие, но и оптимальную производительность  в создании удивительных пользовательских интерфейсов, чтобы ваш проект был красивым и функциональным.",
   },
   {
     h5: "Графический дизайн",
-    p: "Are you lacking a social strategy that's driving your brand forward? Our team knows how to craft always-on and campaign strategies to elevate your content & community across your organic social channels.",
+    p: "Рассказывает вашу уникальную историю: наши талантливые дизайнеры создают визуальные концепции, выделяя ваш бренд среди остальных. Мы разрабатываем логотипы, макеты для социальных сетей, и рекламные материалы, придавая каждому проекту неповторимый характер  в области графического дизайна, чтобы ваш бренд стал узнаваемым и привлекательным для вашей целевой аудитории.",
   },
 ];
 
